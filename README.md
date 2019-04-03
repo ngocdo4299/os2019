@@ -11,6 +11,6 @@ Student Info
 =======================
 
 * Name: Đỗ Thị Minh Ngọc
-* ID: USTHBi8-129
+* ID: USTH.Bi8-129
 
 
