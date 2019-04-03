@@ -1,0 +1,89 @@
+# echo hello word
+hello word
+
+
+# passwd
+Changing password for macbook.
+Old Password:
+New Password:
+Retype New Password:
+
+
+# date
+Wed Apr  3 09:09:47 +07 2019
+
+
+# hostname
+macbooks-MacBook-Air-2.local
+
+
+# arch
+i386
+
+
+# uname -a
+Darwin macbooks-MacBook-Air-2.local 17.7.0 Darwin Kernel Version 17.7.0: Thu Dec 20 21:47:19 PST 2018; root:xnu-4570.71.22~1/RELEASE_X86_64 x86_64
+
+
+# dmesg
+Unable to obtain kernel buffer: Operation not permitted
+usage: sudo dmesg
+
+
+# sudo dmesg
+Password:
+...
+Command 0x2 completed. inCount: 2 data:0x6Command 0x1 completed. inCount: 2 data:0x1101Command 0x16 completed. inCount: 2 data:0xc0Command 0xa completed. inCount: 2 data:0xfcabCommand 0xb completed. inCount: 2 data:0xfc40Command 0x12 completed. inCount: 2 data:0x6eCommand 0x13 completed. inCount: 2 data:0xffffCommand 0xf completed. inCount: 2 data:0x6daCommand 0x10 completed. inCount: 2 data:0xb91SmartBattery: finished polling type 4
+IOConsoleUsers: time(0) 0->0, lin 1, llk 0, 
+IOConsoleUsers: gIOScreenLockState 1, hs 2, bs 0, now 0, sm 0x0
+loginwindow is not entitled for IOHIDLibUserClient keyboard accessIOConsoleUsers: time(0) 0->0, lin 1, llk 0, 
+IOConsoleUsers: gIOScreenLockState 1, hs 2, bs 0, now 0, sm 0x0
+
+
+# uptime
+ 9:11  up 14 days,  2:36, 2 users, load averages: 1.95 2.12 2.32
+
+
+# who am i
+macbook  ttys000  Apr  3 09:08 
+
+
+# whoami
+macbook
+
+
+# who
+macbook  console  Mar 20 06:35 
+macbook  ttys000  Apr  3 09:08 
+
+
+# id
+uid=501(macbook) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),702(com.apple.sharepoint.group.2),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh)
+
+
+# last
+...
+reboot    ~                         Mon Apr  9 10:43 
+shutdown  ~                         Mon Apr  9 10:42 
+macbook   console                   Sat Apr  7 17:15 - 10:42 (1+17:26)
+reboot    ~                         Sat Apr  7 17:14 
+shutdown  ~                         Sat Apr  7 10:59 
+macbook   console                   Fri Apr  6 13:01 - 10:59  (21:57)
+reboot    ~                         Fri Apr  6 12:58 
+shutdown  ~                         Fri Apr  6 12:33 
+macbook   console                   Fri Apr  6 12:19 - 12:33  (00:14)
+reboot    ~                         Fri Apr  6 12:17 
+wtmp begins Fri Apr  6 12:17 
+
+
+# finger
+Login    Name                 TTY  Idle  Login  Time   Office  Phone
+macbook  macbook             *con   14d  Mar 20 06:35
+macbook  macbook              s00        Wed    09:08
+
+
+# w
+ 9:12  up 14 days,  2:37, 2 users, load averages: 1.54 2.00 2.26
+USER     TTY      FROM              LOGIN@  IDLE WHAT
+macbook  console  -                20Mar19 14days -
+macbook  s000     -                 9:08       - w
