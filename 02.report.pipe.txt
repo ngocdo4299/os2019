@@ -1,0 +1,25 @@
+Hung8585s-MacBook:~ hung8585$ grep -l list
+
+
+Hung8585s-MacBook:~ hung8585$ wc /etc/passwd 
+      96     265    5925 /etc/passwd
+
+Hung8585s-MacBook:~ hung8585$ top -l 1 -s 0 | awk ' /Processes/ || /PhysMem/ || /Load Avg/{print}'
+Processes: 249 total, 2 running, 11 stuck, 236 sleeping, 1216 threads 
+Load Avg: 1.89, 1.53, 1.82 
+PhysMem: 7161M used (1668M wired), 1029M unused
+
+Hung8585s-MacBook:~ hung8585$ system_profiler | grep "Cores"
+      Total Number of Cores: 2
+
+Hung8585s-MacBook:~ hung8585$ find /usr $HOME -iname "*.jpg" -print
+/usr/share/cups/ipptool/color.jpg
+/usr/share/cups/ipptool/gray.jpg
+/usr/share/cups/ipptool/testfile.jpg
+/usr/share/doc/cups/images/smiley.jpg
+/usr/share/doc/ntp/description_files/description.jpg
+/usr/share/doc/ntp/pic/9400n.jpg
+/usr/share/doc/ntp/pic/c51.jpg
+/usr/share/doc/ntp/pic/description.jpg
+/usr/share/doc/ntp/pic/driver43_2.jpg
+/usr/share/doc/ntp/pic/fg6039.jpg
