@@ -1,0 +1,25 @@
+Hung8585s-MacBook:~ hung8585$ ps -ax
+  PID TTY           TIME CMD
+    1 ??         3:59.57 /sbin/launchd
+   43 ??         2:55.77 /usr/sbin/syslogd
+   44 ??         0:15.09 /usr/libexec/UserEventAgent (System)
+   46 ??         0:05.80 /usr/libexec/kextd
+   47 ??         0:24.76 /System/Library/Frameworks/CoreServices.framework/Vers
+   51 ??         0:00.63 /System/Library/CoreServices/appleeventsd --server
+   52 ??         0:29.83 /usr/libexec/configd
+   53 ??         0:10.83 /System/Library/CoreServices/powerd.bundle/powerd
+   59 ??        17:45.61 /usr/libexec/airportd
+   61 ??         0:00.59 /usr/libexec/warmd
+
+
+Hung8585s-MacBook:~ hung8585$ ps -A | grep -m1 calculator | awk '{print $1}'
+14455
+
+Hung8585s-MacBook:~ hung8585$  ps -ef | grep 14455
+  501 14455     1   0 10:14AM ??         0:00.63 /Applications/Calculator.app/Contents/MacOS/Calculator
+  501 14600 14133   0 10:23AM ttys000    0:00.00 grep 14455
+Hung8585s-MacBook:~ hung8585$ kill -STOP 14455
+Hung8585s-MacBook:~ hung8585$ kill -CONT 14455
+Hung8585s-MacBook:~ hung8585$ kill -KILL 14455
+Hung8585s-MacBook:~ hung8585$ ps -ef | grep 14455
+  501 14616 14133   0 10:24AM ttys000    0:00.00 grep 14455
