@@ -30,6 +30,12 @@ void initTaco(item *smt)
 	smt->amount = 0;
 	smt->unit = 1;
 }
+
+void printLog(){
+  printf("first = %d\t last = %d\n", first, last);
+  return;
+}
+
 void produce(item *i)
 {
 	while ((first + 1) % BUFFER_SIZE == last)
@@ -39,7 +45,7 @@ void produce(item *i)
 	}
 	memcpy(&buffer[first], i, sizeof(item));
 	first = (first + 1) % BUFFER_SIZE;
-	printf("First = %d\n", first);
+	printLog();
 }
 item *consume()
 {
@@ -51,7 +57,7 @@ item *consume()
 	memcpy(i, &buffer[last], sizeof(item));
 	i->amount -= 1;
 	last = (last + 1) % BUFFER_SIZE;
-	printf("Last = %d\n", last);
+	printLog();
 	return;
 }
 
