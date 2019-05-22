@@ -1,0 +1,105 @@
+1. FCFS
+Gannt Chart:
+----------------------------------------------------------------
+|	P1	|	P2	|	P3	|	P4	|
+----------------------------------------------------------------
+0.0      	8.0      	12.0      	13.0      	18.0      	
+
+
+Process Details:
+ Process 1: 
+	Turn Around Time: 8.00
+	Waiting Time: 0.00
+
+ Process 2: 
+	Turn Around Time: 11.60
+	Waiting Time: 7.60
+
+ Process 3: 
+	Turn Around Time: 12.00
+	Waiting Time: 11.00
+
+ Process 4:
+	Turn Around Time: 16.70
+	Waiting Time: 11.70
+
+ Average Turn Around Time: 12.08
+ Average Waiting Time: 7.58
+
+2. SJF 
+Gannt Chart:
+----------------------------------------------------------------
+|	P3	|	P2	|	P4	|	P1	|
+----------------------------------------------------------------
+
+Process Details:
+ Process 1: 
+	Turn Around Time: 8.00
+	Waiting Time: 0.00
+
+ Process 2: 
+	Turn Around Time: 12.60
+	Waiting Time: 8.60
+
+ Process 3: 
+	Turn Around Time: 8.00
+	Waiting Time: 7.00
+
+ Process 4:
+	Turn Around Time: 16.70
+	Waiting Time: 11.70
+
+ Average Turn Around Time: 11.33
+ Average Waiting Time: 6.83
+ 
+ 3. SRTF 
+Gannt Chart:
+-------------------------------------
+|	P1	|	P2	|	P3	|	P2	|	P4	|	P1	|
+-------------------------------------
+
+Process Details:
+ Process 1: 
+	Turn Around Time: 18.00
+	Waiting Time: 0.00
+
+ Process 2: 
+	Turn Around Time: 5.00
+	Waiting Time: 1.00
+
+ Process 3: 
+	Turn Around Time: 1.00
+	Waiting Time: 0.00
+
+ Process 4:
+	Turn Around Time: 9.10
+	Waiting Time: 4.10
+
+ Average Turn Around Time: 8.275
+ Average Waiting Time: 3.775
+ 
+  4. RR
+Gannt Chart:
+-------------------------------------------------------------------------------------------------
+|	P1	|	P2	|	P3	|	P4	|	P1	|	P2	|	P4	|	P1	|	P2	|	P4	|	P1	|	P2	|	P4	|	P1	|	P4	|	P1	|
+-------------------------------------------------------------------------------------------------
+
+Process Details:
+ Process 1: 
+	Turn Around Time: 18.00
+	Waiting Time: 10.00
+
+ Process 2: 
+	Turn Around Time: 11.60
+	Waiting Time: 7.60
+
+ Process 3: 
+	Turn Around Time: 2.00
+	Waiting Time: 1.00
+
+ Process 4:
+	Turn Around Time: 8.70
+	Waiting Time: 8.70
+
+ Average Turn Around Time: 11.33
+ Average Waiting Time: 6.83
