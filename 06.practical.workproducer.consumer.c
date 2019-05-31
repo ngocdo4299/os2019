@@ -6,40 +6,42 @@
 
 
 typedef struct {
-  char type; // 0=fried chicken, 1=French fries
-  int amount; // pieces or weight
-  char unit; // 0=piece, 1=gram
+  char type; 
+  int amount; 
+  char unit; 
 } item;
 
 item buffer[BUFFER_SIZE];
 int first = 0;
 int last = 0;
 
-void printLog(){
+void print(){
   printf("first = %d\t last = %d\n", first, last);
   return;
 }
-
-void produce(item *i){
-  while ((first + 1) % BUFFER_SIZE == last){
-    //do nothing -- no free buffer item
-    printf("No free buffer item!\n");
-  }
-  memcpy(&buffer[first], i, sizeof(item));
-  first = (first + 1) % BUFFER_SIZE;
-  printLog();
+void produce(item *i)
+{
+	while ((first + 1) % BUFFER_SIZE == last)
+	{
+		printf("No free buffer item!\n");
+		return;
+	}
+	memcpy(&buffer[first], i, sizeof(item));
+	first = (first + 1) % BUFFER_SIZE;
+	print();
 }
-
-item* consume(){
-  item* i = malloc(sizeof(item));
-  while (first == last){
-    // do nothing -- nothing to consume
-    printf("Nothing to consume!\n");
-  }
-  memcpy(i, &buffer[last], sizeof(item));
-  last = (last + 1) % BUFFER_SIZE;
-  printLog();
-  return i;
+item *consume()
+{
+	item *i = malloc(sizeof(item));
+	while (first == last)
+	{
+		printf("Nothing to consume!\n");
+	}
+	memcpy(i, &buffer[last], sizeof(item));
+	i->amount -= 1;
+	last = (last + 1) % BUFFER_SIZE;
+	print();
+	return i;
 }
 
 item* initItem(char type, int amount, char unit){
@@ -51,11 +53,12 @@ item* initItem(char type, int amount, char unit){
 }
 
 int main(){
-  item* order1 = initItem('1',3,'0');
-  item* order2 = initItem('0',9,'1');
+  item* X = initItem('A',1,'B');
+  item* Y = initItem('C',2,'D');
   printf("Initial log:\nfirst = %d\tlast = %d\n\n", first, last);
-  produce(order1);
-  produce(order2);
+  printf("Producing and consuming...\n");
+  produce(X);
+  produce(Y);
   consume();
   return 0;
 }
